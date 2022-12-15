@@ -1,10 +1,13 @@
 import { sentenceCase } from 'change-case';
 import { useState, useEffect } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+
 // @mui
 import { useTheme } from '@mui/material/styles';
 import {
   Box,
-  Card,
+  Button,
+  Card, Iconify,
   Table,
   TableRow,
   Checkbox,
@@ -146,6 +149,16 @@ export default function EcommerceProductList() {
             },
             { name: 'Product List' },
           ]}
+          action={
+            <Button
+              variant="contained"
+              component={RouterLink}
+              to={PATH_DASHBOARD.user.newUser}
+              startIcon={<Iconify icon={'eva:plus-fill'} />}
+            >
+              New User
+            </Button>
+          }
         />
 
         <Card>
