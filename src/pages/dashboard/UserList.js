@@ -160,7 +160,7 @@ export default function UserList() {
                 />
                 <TableBody>
                   {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    const { id, name, role, status,  avatarUrl, } = row;
+                    const { id, name, role, status, avatarUrl } = row;
                     const isItemSelected = selected.indexOf(name) !== -1;
 
                     return (
@@ -181,9 +181,9 @@ export default function UserList() {
                             {name}
                           </Typography>
                         </TableCell>
-                     
+
                         <TableCell align="left">{role}</TableCell>
-           
+
                         <TableCell align="left">
                           <Label
                             variant={theme.palette.mode === 'light' ? 'ghost' : 'filled'}

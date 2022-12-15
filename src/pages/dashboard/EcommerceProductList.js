@@ -7,7 +7,8 @@ import { useTheme } from '@mui/material/styles';
 import {
   Box,
   Button,
-  Card, Iconify,
+  Card,
+  Iconify,
   Table,
   TableRow,
   Checkbox,
@@ -148,17 +149,18 @@ export default function EcommerceProductList() {
               href: PATH_DASHBOARD.eCommerce.root,
             },
             { name: 'Product List' },
-          ]}
-          action={
+          ]} 
+             action={
             <Button
               variant="contained"
               component={RouterLink}
-              to={PATH_DASHBOARD.user.newUser}
-              startIcon={<Iconify icon={'eva:plus-fill'} />}
+              to={PATH_DASHBOARD.eCommerce.newProduct}
+              // startIcon={<Iconify icon={'eva:plus-fill'} />}
             >
-              New User
+              New Product
             </Button>
           }
+      
         />
 
         <Card>
