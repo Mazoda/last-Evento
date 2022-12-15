@@ -9,7 +9,7 @@ import { PATH_DASHBOARD } from '../../routes/paths';
 import useAuth from '../../hooks/useAuth';
 import useSettings from '../../hooks/useSettings';
 // _mock_
-import { _userAbout, _userFeeds, _userFriends, _userGallery, _userFollowers } from '../../_mock';
+import { _userAbout, _userFeeds,  _userGallery } from '../../_mock';
 // components
 import Page from '../../components/Page';
 import Iconify from '../../components/Iconify';
@@ -18,9 +18,9 @@ import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import {
   Profile,
   ProfileCover,
-  ProfileFriends,
+
   ProfileGallery,
-  ProfileFollowers,
+
 } from '../../sections/@dashboard/user/profile';
 
 // ----------------------------------------------------------------------
@@ -48,14 +48,10 @@ export default function UserProfile() {
   const { user } = useAuth();
 
   const [currentTab, setCurrentTab] = useState('profile');
-  const [findFriends, setFindFriends] = useState('');
+ 
 
   const handleChangeTab = (newValue) => {
     setCurrentTab(newValue);
-  };
-
-  const handleFindFriends = (value) => {
-    setFindFriends(value);
   };
 
   const PROFILE_TABS = [
@@ -63,16 +59,6 @@ export default function UserProfile() {
       value: 'profile',
       icon: <Iconify icon={'ic:round-account-box'} width={20} height={20} />,
       component: <Profile myProfile={_userAbout} posts={_userFeeds} />,
-    },
-    {
-      value: 'followers',
-      icon: <Iconify icon={'eva:heart-fill'} width={20} height={20} />,
-      component: <ProfileFollowers followers={_userFollowers} />,
-    },
-    {
-      value: 'friends',
-      icon: <Iconify icon={'eva:people-fill'} width={20} height={20} />,
-      component: <ProfileFriends friends={_userFriends} findFriends={findFriends} onFindFriends={handleFindFriends} />,
     },
     {
       value: 'gallery',
