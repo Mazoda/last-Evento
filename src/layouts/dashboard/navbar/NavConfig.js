@@ -52,8 +52,8 @@ const navConfig = [
         children: [
           { title: 'Packages', path: PATH_DASHBOARD.blog.posts  },
           // { title: 'product', path: PATH_DASHBOARD.eCommerce.productById },
-          { title: 'All Products', path: PATH_DASHBOARD.eCommerce.list },
-          { title: 'New Package', path: PATH_DASHBOARD.eCommerce.newProduct },
+          { title: 'Products', path: PATH_DASHBOARD.eCommerce.list },
+          { title: 'New Package/Product', path: PATH_DASHBOARD.eCommerce.newProduct },
           { title: 'Edit Package', path: PATH_DASHBOARD.eCommerce.editById },
           // { title: 'checkout', path: PATH_DASHBOARD.eCommerce.checkout },
           // { title: 'invoice', path: PATH_DASHBOARD.eCommerce.invoice },

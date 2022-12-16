@@ -126,16 +126,16 @@ export default function UserList() {
             { name: 'User', href: PATH_DASHBOARD.user.root },
             { name: 'List' },
           ]}
-          action={
-            <Button
-              variant="contained"
-              component={RouterLink}
-              to={PATH_DASHBOARD.user.newUser}
-              startIcon={<Iconify icon={'eva:plus-fill'} />}
-            >
-              New User
-            </Button>
-          }
+          // action={
+          //   <Button
+          //     variant="contained"
+          //     component={RouterLink}
+          //     to={PATH_DASHBOARD.user.newUser}
+          //     startIcon={<Iconify icon={'eva:plus-fill'} />}
+          //   >
+          //     New User
+          //   </Button>
+          // }
         />
 
         <Card>
