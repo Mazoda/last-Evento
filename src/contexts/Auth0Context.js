@@ -9,9 +9,9 @@ import { AUTH0_API } from '../config';
 let auth0Client = null;
 
 const initialState = {
-  isAuthenticated: false,
-  isInitialized: false,
-  user: null,
+  isAuthenticated: true,
+  isInitialized: true,
+  user: null
 };
 
 const handlers = {
@@ -90,8 +90,10 @@ function AuthProvider({ children }) {
     await auth0Client.loginWithPopup();
     const isAuthenticated = await auth0Client.isAuthenticated();
 
+
     if (isAuthenticated) {
       const user = await auth0Client.getUser();
+
       dispatch({ type: 'LOGIN', payload: { user } });
     }
   };

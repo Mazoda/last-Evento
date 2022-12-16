@@ -25,28 +25,18 @@ import {
 
 // ----------------------------------------------------------------------
 
-const GENDER_OPTION = ['Men', 'Women', 'Kids'];
+const GENDER_OPTION = ['Men', 'Women'];
 
 const CATEGORY_OPTION = [
-  { group: 'Clothing', classify: ['Shirts', 'T-shirts', 'Jeans', 'Leather'] },
-  { group: 'Tailored', classify: ['Suits', 'Blazers', 'Trousers', 'Waistcoats'] },
-  { group: 'Accessories', classify: ['Shoes', 'Backpacks and bags', 'Bracelets', 'Face masks'] },
+  { group: 'Products', classify: ['Product-1','Product-2','Product-3','Product-4',] },
+  { group: 'Packages', classify: ['Packeg-1','Packeg-2','Packeg-3','Packeg-4',] },
+  // { group: 'Accessories', classify: ['Shoes', 'Backpacks and bags', 'Bracelets', 'Face masks'] },
 ];
 
 const TAGS_OPTION = [
-  'Toy Story 3',
-  'Logan',
-  'Full Metal Jacket',
-  'Dangal',
-  'The Sting',
-  '2001: A Space Odyssey',
-  "Singin' in the Rain",
-  'Toy Story',
-  'Bicycle Thieves',
-  'The Kid',
-  'Inglourious Basterds',
-  'Snatch',
-  '3 Idiots',
+  'حفلة عيد ميلاد',
+  "حفلة تخرج",
+  "حفلة زفاف"
 ];
 
 const LabelStyle = styled(Typography)(({ theme }) => ({
@@ -160,7 +150,7 @@ export default function ProductNewForm({ isEdit, currentProduct }) {
         <Grid item xs={12} md={8}>
           <Card sx={{ p: 3 }}>
             <Stack spacing={3}>
-              <RHFTextField name="name" label="Product Name" />
+              <RHFTextField name="name" label=" Name" />
 
               <div>
                 <LabelStyle>Description</LabelStyle>
@@ -189,8 +179,8 @@ export default function ProductNewForm({ isEdit, currentProduct }) {
               <RHFSwitch name="inStock" label="In stock" />
 
               <Stack spacing={3} mt={2}>
-                <RHFTextField name="code" label="Product Code" />
-                <RHFTextField name="sku" label="Product SKU" />
+                <RHFTextField name="code" label=" Code" />
+                <RHFTextField name="sku" label=" SKU" />
 
                 <div>
                   <LabelStyle>Gender</LabelStyle>

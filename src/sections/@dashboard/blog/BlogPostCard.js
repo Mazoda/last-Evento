@@ -119,9 +119,9 @@ export function PostContent({ title, view, comment, share, createdAt, index }) {
   const latestPostSmall = index === 1 || index === 2;
 
   const POST_INFO = [
-    { number: comment, icon: 'eva:message-circle-fill' },
-    { number: view, icon: 'eva:eye-fill' },
-    { number: share, icon: 'eva:share-fill' },
+    // { number: comment, icon: 'eva:pricetags-outline' },
+    // { number: view, icon: 'eva:eye-fill' },
+    // { number: share, icon: 'eva:share-fill' },
   ];
 
   return (
